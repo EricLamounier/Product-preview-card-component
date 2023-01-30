@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f3eae3;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    width: 100%;
+    max-width: 600px;
+    min-width: 250px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    height: auto;
+    display: flex;
+    margin: 20px;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px rgba(146, 146, 146, 0.397);
+}
+
+#container .box{
+    width: 50%;
+    padding: 30px 0 30px 0;
+}
+
+#container .box:nth-child(1){
+    background: url(../images/image-product-desktop.jpg);
+    background-size: cover;
+}
+
+#right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#right #rightBox {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;    
+}
+
+#rightBox #item {
+    color: #8b8b8b;
+    font-family: 'Montserrat';
+    font-size: 12px;
+    letter-spacing: 5px;
+    font-weight: 700;
+}
+
+#rightBox #title {
+    font-family: 'Fraunces';
+    font-size: 35px;
+    line-height: 37px;
+    color: rgb(26, 26, 26);
+    padding-left: 5px;
+}
+
+#rightBox #description {
+    color: #727272;
+    font-family: 'Montserrat';
+    font-weight: 500;
+}
+
+#right #price {
+    display: flex;
+    align-items: center
+}
+
+#price #currentPrice {
+    font-family: 'Fraunces';
+    font-weight: 500;
+    color: #3d8168;
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+#price #oldPrice {
+    font-family: 'Montserrat';
+    color: #727272;
+    text-decoration: line-through;
+    font-size: 12px;
+    font-weight: 550;
+}
+
+#button {
+    position: relative;
+}
+
+#button #addChart {
+    width: 85%;
+    background-color: #3d8168;
+    border: 1px solid transparent;
+    outline: 1;
+    padding: 15px;
+    color: rgb(238, 238, 238);
+    font-family: 'Montserrat';
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#button #addChart:hover {
+    border-color: rgb(238, 238, 238);
+    box-shadow: 0px 0px 5px rgba(34, 34, 34, 0.349) inset;
+}
+
+#button #addChart:active {
+    transform: translate(0.6px, 0.6px);
+}
+
+#cartImg {
+    position: relative;
+    top: 3px;
+    margin-right: 10px;
+}
+
+@media (max-width: 450px) {
+    #container {
+        flex-direction: column;
+    }
+
+    #container .box{
+        width: 100%;
+    }
+
+    #container .box:nth-child(1){
+        height: 250px;
+        background: url(../images/image-product-mobile.jpg);
+        background-size: cover;
+    }
+
+    #container .box:nth-child(2){
+        height: 60%;
+    }
+
+    #rightBox #description {
+        font-size: 16px;
+    }
+}
