@@ -17,7 +17,7 @@ body {
 }
 
 main {
-    display: flex;
+    display: flex !important;
     flex: 1;
     justify-content: center;
     align-items: center;
